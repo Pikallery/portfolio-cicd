@@ -1,0 +1,19 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)"/>
+  <!-- Body / torso -->
+  <ellipse cx="100" cy="195" rx="62" ry="46" fill="rgba(255,255,255,0.25)" clip-path="url(#circle)"/>
+  <!-- Head -->
+  <circle cx="100" cy="82" r="34" fill="rgba(255,255,255,0.92)"/>
+  <!-- Initials -->
+  <text x="100" y="92" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563eb" text-anchor="middle" dominant-baseline="middle">SP</text>
+</svg>
