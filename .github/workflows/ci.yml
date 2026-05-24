@@ -1,0 +1,60 @@
+name: CI Pipeline
+
+# Trigger on push to main/develop or any pull request targeting main
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    name: Build & Test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+
+    # Test against two Node.js versions to ensure compatibility
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+      fail-fast: false
+
+    steps:
+      # ── Stage 1: Checkout Code ──────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Stage 2: Setup Environment ─────────────────────────────────────────
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── Stage 3: Code Quality Checks ──────────────────────────────────────
+      - name: Run ESLint (lint check)
+        run: npm run lint
+
+      - name: Run Prettier (format check)
+        run: npm run format:check
+
+      # ── Stage 4: Execute Tests ─────────────────────────────────────────────
+      - name: Run unit tests with coverage
+        run: npm test
+
+      # ── Stage 5: Build ──────────────────────────────────────────────────────
+      - name: Build project
+        run: npm run build
+
+      # ── Stage 6: Upload build artifact ────────────────────────────────────
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-node-${{ matrix.node-version }}
+          path: dist/
+          retention-days: 1

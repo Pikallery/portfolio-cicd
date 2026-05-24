@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of a DevOps & Web Developer" />
+    <title>Portfolio | Sai Pradyumna Samal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">SP<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon">&#9790;</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I am</p>
+        <h1 class="hero-name">Sai Pradyumna <span>Samal</span></h1>
+        <p class="hero-role">DevOps Engineer &amp; Web Developer</p>
+        <p class="hero-tagline">
+          Building automated pipelines and modern web experiences.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-badges">
+          <img
+            src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white"
+            alt="GitHub Actions"
+          />
+          <img
+            src="https://img.shields.io/badge/Deployed-GitHub%20Pages-222222?style=flat-square&logo=github&logoColor=white"
+            alt="GitHub Pages"
+          />
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <div class="pipeline-diagram">
+          <div class="pipe-node active">Push</div>
+          <div class="pipe-arrow">&#8594;</div>
+          <div class="pipe-node active">CI</div>
+          <div class="pipe-arrow">&#8594;</div>
+          <div class="pipe-node active">Test</div>
+          <div class="pipe-arrow">&#8594;</div>
+          <div class="pipe-node active">Deploy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a passionate developer and DevOps enthusiast with hands-on experience building
+              automated CI/CD pipelines using <strong>GitHub Actions</strong>. I love bridging the
+              gap between development and operations to deliver software faster and more reliably.
+            </p>
+            <p>
+              This portfolio itself is deployed via an automated GitHub Actions pipeline — every
+              push to the <code>main</code> branch triggers a build, test, and deployment cycle to
+              GitHub Pages.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Weeks Internship</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Workflows Built</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Automated</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-card">
+            <h3>Quick Info</h3>
+            <ul class="info-list">
+              <li><span class="info-icon">&#128101;</span> Sai Pradyumna Samal</li>
+              <li><span class="info-icon">&#127891;</span> DevOps Intern</li>
+              <li><span class="info-icon">&#128187;</span> GitHub Actions</li>
+              <li><span class="info-icon">&#127760;</span> GitHub Pages</li>
+              <li><span class="info-icon">&#128222;</span> samalsaipradyumna@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+        <div id="skills-grid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <p class="section-subtitle">Things I have built</p>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let us talk.</p>
+        <div class="contact-wrapper">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Built &amp; deployed with
+          <span class="heart">&#10084;</span> using
+          <a
+            href="https://github.com/features/actions"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub Actions</a
+          >
+        </p>
+        <p class="footer-copy">&copy; 2026 Sai Pradyumna Samal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
