@@ -1,8 +1,8 @@
 # Portfolio Website — CI/CD with GitHub Actions
 
-<!-- Replace YOUR_USERNAME and YOUR_REPO with your actual GitHub username and repo name -->
-![CI Pipeline](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/ci.yml/badge.svg)
-![CD Pipeline](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/cd.yml/badge.svg)
+<!-- Replace Pikallery and portfolio-cicd with your actual GitHub username and repo name -->
+![CI Pipeline](https://github.com/Pikallery/portfolio-cicd/actions/workflows/ci.yml/badge.svg)
+![CD Pipeline](https://github.com/Pikallery/portfolio-cicd/actions/workflows/cd.yml/badge.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=flat-square&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
@@ -12,7 +12,7 @@ A portfolio website with a complete **CI/CD pipeline** powered by GitHub Actions
 
 ## Live Demo
 
-> **URL:** `https://YOUR_USERNAME.github.io/YOUR_REPO/`  
+> **URL:** `https://Pikallery.github.io/portfolio-cicd/`  
 > *(Replace with your actual GitHub Pages URL after the first deploy)*
 
 ---
@@ -112,8 +112,8 @@ Developer pushes code
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Pikallery/portfolio-cicd.git
+cd portfolio-cicd
 ```
 
 ### 2. Install dependencies
